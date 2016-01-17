@@ -40,22 +40,52 @@ angular.module('fms', ['ionic', 'fms.controllers', 'fms.services', 'fms.config',
 
   // Each tab has its own nav history stack:
 
-  .state('tab.tasklist', {
-    url: '/tasklist',
+  .state('tab.welcome', {
+    url: '/welcome',
     views: {
-      'tab-tasklist': {
-        templateUrl: 'templates/tab-tasklist.html',
-        controller: 'TaskListCtrl'
+      'tab-welcome': {
+        templateUrl: 'templates/tab-welcome.html',
+        controller: 'WelcomeCtrl'
+      }
+    }
+  })
+  
+  .state('tab.inspectionlist', {
+    url: '/inspectionlist',
+    views: {
+      'tab-inspection': {
+        templateUrl: 'templates/tab-inspectionlist.html',
+        controller: 'InspectionListCtrl'
       }
     }
   })
 
-  .state('tab.taskdetails', {
-    url: '/taskdetails?task',
+  .state('tab.inspectiondetils', {
+    url: '/inspectiondetails?task',
     views: {
-      'tab-tasklist': {
-        templateUrl: 'templates/tab-taskdetails.html',
-        controller: 'TaskDetailsCtrl'
+      'tab-inspection': {
+        templateUrl: 'templates/tab-inspectiondetails.html',
+        controller: 'InspectionDetailsCtrl'
+      }
+    }
+  })
+  
+  .state('tab.cleaningperformance', {
+    url: '/cleaningperformance',
+    views: {
+      'tab-cleaningperformance': {
+        templateUrl: 'templates/tab-cleaningperformance.html',
+        controller: 'CleaningPerformanceCtrl'
+      }
+    }
+  })
+
+  .state('tab.cleaningperformancedetails', {
+    url: '/cleaningperformancedetails?task',
+    views: {
+      'tab-cleaningperformance': {
+        templateUrl: 'templates/tab-cleaningperformancedetails.html',
+        controller: 'CleaningPerformanceDetailsCtrl'
       }
     }
   })
@@ -71,6 +101,6 @@ angular.module('fms', ['ionic', 'fms.controllers', 'fms.services', 'fms.config',
   });
 
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/tab/tasklist');
+  $urlRouterProvider.otherwise('/tab/welcome');
 
 });

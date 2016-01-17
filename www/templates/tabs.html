@@ -5,9 +5,19 @@ navigation history that also transitions its views in and out.
 -->
 <ion-tabs class="tabs-icon-top tabs-color-active-positive">
 
-  <!-- Case Tab -->
-  <ion-tab title="Assignment" icon-off="ion-ios-list-outline" icon-on="ion-ios-list" href="#/tab/tasklist">
-    <ion-nav-view name="tab-tasklist"></ion-nav-view>
+	<!-- Welcome Tab -->
+  <ion-tab title="Welcome" icon-off="ion-ios-home-outline" icon-on="ion-ios-home" href="#/tab/welcome">
+    <ion-nav-view name="tab-welcome"></ion-nav-view>
+  </ion-tab>
+  
+  <!-- Inspection Tab -->
+  <ion-tab title="Inspection List" icon-off="ion-ios-list-outline" icon-on="ion-ios-list" href="#/tab/inspectionlist">
+    <ion-nav-view name="tab-inspectionlist"></ion-nav-view>
+  </ion-tab>
+  
+  <!-- Cleaning Performance Tab -->
+  <ion-tab title="Cleaning Performance" icon-off="ion-ios-rose-outline" icon-on="ion-ios-rose" href="#/tab/cleaningperformance">
+    <ion-nav-view name="tab-cleaningperformance"></ion-nav-view>
   </ion-tab>
   
   <!-- Setting Tab -->

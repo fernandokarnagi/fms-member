@@ -1,0 +1,23 @@
+<ion-view view-title="Inspection List" cache-view="true">
+
+	<ion-nav-buttons side="right">
+      <button class="button button-icon icon ion-android-refresh" ng-click="reloadTaskList()">
+      </button>
+    </ion-nav-buttons>
+   
+   <ion-content class="padding">
+    
+    <ion-list >
+      <ion-item class="item-icon-right" ng-repeat="task in tasks" type="item-text-wrap" ng-click="viewDetails(task)">
+        <h2>Task ID: {{task.taskId}}</h2>
+        <p>Job: {{task.job}}</p>
+        <p>Date: {{task.date}}</p>
+        <p>Property: {{task.property}}</p>
+        <p>Address: {{task.address}}</p>
+        
+        <i class="icon ion-android-arrow-dropright"><h4></h4></i> 
+      </ion-item>
+    </ion-list>
+      
+    </ion-content>
+</ion-view>
